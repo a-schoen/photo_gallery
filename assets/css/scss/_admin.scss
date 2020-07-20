@@ -1,0 +1,159 @@
+/* ======================== Admin edit form elements ======================== */
+
+.admin-btn,
+input[type="submit"].admin-btn {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: $text-color-secondary;
+  border: 1px solid $text-color-secondary;
+  background: $page-bg-color;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+input[type="submit"].admin-btn:hover,
+.admin-btn:hover {
+  background-color: rgba(204, 204, 0, 0.2);
+  color: $text-color-primary;
+}
+
+.admin a {
+  color: $text-color-secondary;
+}
+
+.admin-form {
+  color: $text-color-primary;
+  line-height: 1.5em;
+  label {
+    color: $text-color-secondary;
+    font-size: $font-size-smaller;
+    padding: 0 5px;
+  }
+  input {
+    color: $page-bg-color;
+  }
+}
+
+/* ======================== Sortable image list  ======================== */  
+
+#sortable-list {
+    padding: 0;
+    margin: 0;
+    .img-list-display {
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        display: block;
+        height: 100px;
+
+        .img-list-display-inner {
+            overflow: hidden;
+            position: relative;
+            height: 100px;
+            float: left;
+            width: 50%;
+            border: 1px dotted $border-color-primary;
+            box-sizing: border-box;
+            &:nth-child(1) {
+                border-right: 0;
+            }
+            &:nth-child(2) {
+                border-left: 0;
+            }
+        }
+
+        img {
+            position: absolute;
+            max-height: 80px;
+            max-width: 50%;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        p {
+            height: 20px;
+            width: 100%;
+            float: none;
+            position: absolute;
+            display: inline-block;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            &.instruction {
+                padding: 30px 0;
+                display: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        &:hover p.instruction {
+            background-color: $text-color-primary;
+            color: $page-bg-color;
+            float: right;
+            display: block;
+        }
+    }
+}
+
+/* ======================== Add images to gallery  ======================== */  
+
+form.gallery-images {
+  #image-group {
+    border: 0;
+    .image-box {
+      border-left: 1px solid $border-color-primary;
+      border-top: 1px solid $border-color-primary;
+
+      .img-form {
+        line-height: 1.5em;
+        font-size: 60%;
+        color: $text-color-primary;
+        display: inline-block;
+        background-color:  $page-bg-color;
+        position: absolute;
+      }
+      
+      .img-checkbox-gallery {
+        bottom: 5px;
+        right: 5px;
+        padding: 3px 3px 1px 3px;
+        border: 1px solid $border-color-primary;
+      }      
+    }
+  }
+}
+/* ======================== Image collection admin  ======================== */
+.image-collection-form {
+
+  .img-form {
+    line-height: 1.5em;
+    font-size: 60%;
+    color: $text-color-primary;
+    display: inline-block;
+    background-color: $page-bg-color;
+    position: absolute;
+    border: 1px solid #fff;
+    right: 5px;
+  }
+
+  .img-checkbox-delete {
+    padding: 3px;
+    width: auto;
+    top: 5px;
+  }
+  
+  .img-select-public {
+    width: auto;
+    bottom: 0;
+    padding: 3px;
+  }
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Alegreya Sans SC';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/AlegreyaSansSC-Regular.eot");
+    src: url("../fonts/AlegreyaSansSC-Regular.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/AlegreyaSansSC-Regular.otf") format("opentype"),
+      url("../fonts/AlegreyaSansSC-Regular.svg") format("svg"),
+      url("../fonts/AlegreyaSansSC-Regular.ttf") format("truetype"),
+      url("../fonts/AlegreyaSansSC-Regular.woff") format("woff"),
+      url("../fonts/AlegreyaSansSC-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: 'Alegreya Sans SC';
+    src: url("../fonts/AlegreyaSansSC-Bold.eot");
+    src: url("../fonts/AlegreyaSansSC-Bold.eot?#iefix") format("embedded-opentype"),
+      url("../fonts/AlegreyaSansSC-Bold.otf") format("opentype"),
+      url("../fonts/AlegreyaSansSC-Bold.svg") format("svg"),
+      url("../fonts/AlegreyaSansSC-Bold.ttf") format("truetype"),
+      url("../fonts/AlegreyaSansSC-Bold.woff") format("woff"),
+      url("../fonts/AlegreyaSansSC-Bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+}

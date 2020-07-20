@@ -1,0 +1,195 @@
+html {
+    font-size: $font-size-normal;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: $page-bg-color;
+    color: $text-color-primary;
+    font-family: $font-primary;
+}
+
+/* ======================== Page structure ======================== */
+
+#container {
+  min-height: 100%;
+  margin: 20px 30px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 50px auto auto auto 30px;
+  grid-template-areas: "header"
+    "nav"
+    "image"
+    "content"
+    "gallery"
+    "footer";
+
+  &.page-type-gallery,
+  &.page-type-galleries {
+    grid-template-rows: 50px 50px max-content auto 30px;
+    grid-template-areas: "header" "nav" "content" "gallery" "footer";
+  }
+}
+
+#page-header {
+  grid-area: header;
+}
+
+#admin-login {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#site-nav {
+  grid-area: nav;
+}
+
+#content {
+  grid-area: content;
+}
+
+.image-display {
+  grid-area: image;
+}
+
+#showcase-row {
+  grid-area: gallery;
+}
+
+#site-footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  a {
+    color: $text-color-secondary;
+    font-size: $font-size-smaller;
+  }
+}
+
+/* ------------------- Desktop page structure------------------- */
+
+@media (min-width: $screen_lg) {
+  #container {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 70px 50px auto auto 30px;
+    grid-template-areas: "header header"
+      "nav image"
+      "content image"
+      "gallery gallery"
+      "footer footer";
+    .image-display {
+      grid-row: span 2;
+    }
+    &.page-type-gallery,
+    &.page-type-galleries {
+      grid-template-rows: 70px 50px auto 30px;
+      grid-template-areas: "header header" "nav gallery" "content gallery" "footer footer";
+  
+      #showcase-row {
+        grid-row: span 2;
+      }
+    }
+  }
+}
+
+/* ======================== Page content area ======================== */
+#content {
+  padding: 1em 1em 3em 0;
+  background-color: $page-bg-color;
+  a {
+      color: $text-color-primary;
+  }
+
+  #page-title h2 {
+    font-family: "Alegreya Sans SC", sans-serif;
+    display: inline-block;
+    margin: 0;
+    max-width: 90%;
+    font-weight: normal;
+  }
+
+  #page-content {
+    word-break: normal;
+    p, ul, span {
+      font-size: $font-size-smaller;
+    }
+    .contact-form {
+      font-size: $font-size-smaller;
+      line-height: 2em;
+      .namefield{
+        display: none;
+      }
+    }
+
+  }
+} 
+
+/* ======================== Basic elements ======================== */
+a:link,
+a:visited,
+a:hover {
+    color: $text-color-primary;
+}
+  
+form {
+  line-height: 2em;
+  padding: 1em 0;
+  font-size: 1rem;
+}
+  
+input,
+textarea,
+select {
+  color: $text-color-input;
+  font-size: $font-size-smaller;
+  line-height: 1.5em;
+}
+  
+select {
+  margin: 5px 0;
+}
+
+textarea,
+input[type="text"],
+input[type="file"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90%;
+}
+  
+#upload_file {
+  color: $text-color-input;
+}
+
+input[type="submit"],
+button,
+.btn {
+  font-size: $font-size-smaller;
+  cursor: pointer;
+  background-color: $page-bg-color;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  color: $text-color-primary;
+  border: 1px solid $border-color-primary;
+  margin: 1em;
+  &:active {
+    background-color: $text-color-primary;
+    color: $page-bg-color;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

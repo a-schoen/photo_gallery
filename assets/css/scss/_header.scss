@@ -1,0 +1,85 @@
+/* ======================== Header logo ======================== */
+
+#logo {
+    color: $text-color-secondary;
+    font-family: "Alegreya Sans SC", sans-serif;
+    line-height: 0.5rem;
+    background-color: $page-bg-color;
+    display: inline-block;
+    h1 {
+        font-size: 2rem;
+        padding-top: 0;
+        margin-top: 0;
+        font-weight: normal;
+    }
+    h3 {
+        font-size: 1rem;
+        position: relative;
+        left: 43px;
+        top: 7px;
+        margin-top: 0;
+        font-weight: normal;
+    }
+}
+
+@media(min-width: $screen_lg) {
+  #logo {
+    h1 {
+        font-size: 4em;
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 1.7em;
+        left: 103px;
+    }
+  }
+}
+
+/* ======================== Admin login area ======================== */
+#admin-login {
+    width: 200px;
+    display: inline-block;
+    top: 20px;
+    right: 30px;
+    position: fixed;
+    z-index: 1;
+  }
+  
+  .admin-login-btn {
+    font-size: 0.8rem;
+    margin: 0;
+    float: right;
+  }
+  
+  .admin-login-close {
+    margin: 1em;
+    float: right;
+  }
+  
+  .admin-login-form {
+    text-align: center;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    display: none;
+    background-color: $page-bg-color;
+    padding: 10px;
+    border: 1px dashed $text-color-secondary;
+    &.showing {
+        display: inline-block;
+    }
+
+    ul {
+        padding: 0 2em;
+        font-size: $font-size-smaller;
+        li a {
+            text-decoration: none;
+            &:hover {
+                color: $text-color-secondary;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+  

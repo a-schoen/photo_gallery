@@ -1,0 +1,15 @@
+.*
+!.gitignore
+assets/css/*
+!assets/css/scss/*
+assets/fonts/*
+assets/img/*
+assets/img_thumbnails/*
+assets/js/*
+node_modules/*
+php/classes/*.php
+php/logs/*
+php/testing.php
+php/config.php
+php/config-prod.php
+php/config-dev.php

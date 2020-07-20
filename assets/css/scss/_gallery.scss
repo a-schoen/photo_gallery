@@ -1,0 +1,182 @@
+/* ======================== Main image display ======================== */
+
+#showcase-img {
+    img{
+        max-width: 100%;
+    }
+    .main-img-text{
+        display: none;
+        position: absolute;
+        bottom: 10px;
+        padding: 5px 10px;
+        background-color: $page-bg-color;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &:hover .main-img-text{
+        display: inline-block;
+    }
+}
+
+.image-display {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    font-size: 0;
+    img{
+        margin: 0 auto 10px;
+        max-width: 100%;
+        border: 1px solid $border-color-primary;
+        box-sizing: border-box;
+    }
+    .fullview-btn {
+        position: fixed;
+        display: none;
+        &:disabled {
+            opacity: 0.5; 
+        }
+    }
+    #image-click-text{
+        cursor: pointer;
+        display: inline-block;
+        border: 1px solid $border-color-primary;
+        background-color: $page-bg-color;
+        color: $text-color-primary;
+        font-size: $font-size-smaller;
+        width: 100%;
+        padding: 5px 0;
+    }
+}
+
+@media(min-width: $screen_lg) {
+    .image-display {
+        #image-click-text{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20%;
+            padding: 5px;
+        }
+    }
+}
+
+/* ======================== Full screen slider view /* ======================== */
+
+.image-display.full-screen-display {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    //toDo: make this loader gif work with the image fading in/out
+    //background-image: url('../img/loader.gif');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    background-color: $page-bg-color;
+    .img-view {
+        position: absolute;
+        max-height: 99%;
+        max-width: 99%;
+        margin: auto;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+    #image-click-text {
+        display: none;
+    }
+    .fullview-btn {
+      display: inline-block;
+      z-index: 1;
+    }
+    
+    .gallery-back-btn,
+    .img-back-btn {
+      right: 20px;
+      top: 40px;
+    }
+    
+    .slide-btn {
+      bottom: 40px;
+    }
+    
+    .slide-forward {
+      right: 20px;
+    }
+    
+    .slide-back {
+      left: 20px;
+    }
+    
+    #play {
+      left: 20px;
+      top: 40px;
+    }
+}
+    
+/* ======================== Image list view ======================== */  
+
+#showcase-row {
+    width: 100%;
+}
+#image-group {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20%);
+    justify-content: space-between;
+    grid-gap: 10px;
+    .image-box {
+        border: 1px solid $border-color-primary;
+        box-sizing: border-box;
+        position: relative;
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .image-box-text {
+            margin: 0;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $page-bg-color;
+            padding: 3px;
+            color: $text-color-primary;
+            font-size: $font-size-smaller;
+            h5 {
+                margin: 0;
+                padding: 0 5px;
+            }
+        }
+    }
+    .instruction {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: $screen_md) {
+    #image-group {
+        grid-template-columns: repeat(auto-fill, 10%);
+    }
+}
+
+/* ======================== Gallery list view ======================== */
+
+#image-group.galleries {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 200px);
+}  
+
+/* ======================== Grid-less/IE backup ======================== */
+
+#image-group {
+    text-align: center;
+    .image-box {
+        display: inline-block
+    }
+}
+ 

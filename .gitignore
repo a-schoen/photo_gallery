@@ -1,7 +1,7 @@
 .*
 !.gitignore
-assets/css/*
-!assets/css/scss/*
+assets/css/*.css
+assets/css/*.map
 assets/fonts/*
 assets/img/*
 assets/img_thumbnails/*

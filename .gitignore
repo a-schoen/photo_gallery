@@ -13,3 +13,4 @@ php/testing.php
 php/config.php
 php/config-prod.php
 php/config-dev.php
+*log

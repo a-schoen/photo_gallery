@@ -18,7 +18,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "eslint": "^7.5.0",
     "eslint-config-google": "^0.14.0",
-    "grunt": "^1.1.0",
+    "grunt": "^1.5.3",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "webpack": "^4.43.0",
